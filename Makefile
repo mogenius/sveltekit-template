@@ -29,7 +29,6 @@ build-prod: docker-rm-images
 run-prod: docker-rm-container docker-rm-images
 	docker run --init \
 		-p ${expose}:3000 \
-		--network my-mogenius-net \
 		--name ${name} \
 		${service};
 
